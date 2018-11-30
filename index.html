@@ -7,7 +7,7 @@
                             <!-- appel bootstrap et jquery .... -->
         <link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet"> <!-- en local-->
         <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> --> <!-- en ligne -->
-        <script src="jquery-3.3.1.js"></script><!-- en local -->
+        <script src="js/jquery-3.3.1.js"></script><!-- en local -->
 				<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --><!-- jquery en ligne -->
         <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script> <!-- js bootstrap en local -->
 				<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> --><!-- js bootstrap en ligne -->
@@ -18,90 +18,112 @@
         <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> --> <!-- en ligne -->
                             <!-- appel fichier css   -->
 				<link rel="stylesheet" href="style.css"> <!-- mon css -->
+				<script src="js/script.js"></script>
 	</head>
 
 	<body>
-    <header class="text-center mt-5">
+    <header class="text-center bg-warning">
 			<h1>Interactive quizz</h1>
+			<button class="btn btn-danger mb-1">Answer</button>
     </header>
     <section class="container-fluid">
 			<div class="row justify-content-center">
-			<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-					<h5>Question 1</h5>
-					<div class="row cadre">
-						<div class="col-10">
-							<div class="enonce cadre">
-								<p>enoncé</p>
-							</div>
-						<ul>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						</ul>
-					  </div>
-					<div class="col-2 d-flex align-items-center justify-content-center cadre">
-						<i class="fas fa-question"></i>
-					</div>
-				  </div>
-			</div>
-			<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-					<h5>Question 2</h5>
-					<div class="row cadre">
-						<div class="col-10">
-							<div class="enonce cadre">
-								<p>enoncé</p>
-							</div>
-						<ul>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						</ul>
+				     <!--    question 1  -->
+				<div id="question1" class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
+						<h5>Question 1</h5>
+						<div class="row">
+							<div class="col-10">
+								<div class="enonce">
+									<p>What does CSS mean ? </p>
+								</div>
+							<div><input type="radio" id="q1rep1" name="answer1" value="false" checked><label class="reponse" for="reponse1">Call Sexy Sushi</label></div>
+							<div><input type="radio" id="q1rep2" name="answer1" value="true"><label class="reponse" for="reponse2">Cascading Style Sheet</label></div>
+							<div><input type="radio" id="q1rep2" name="answer1" value="false"><label class="reponse" for="reponse3">Create Style Sheet</label></div>
+						  </div>
+						<div class="col-2 d-flex align-items-center justify-content-center">
+							<img id="imgq1" class="" src="question.png">
 						</div>
-					<div class="col-2 d-flex align-items-center justify-content-center cadre">
-						<i class="fas fa-question"></i>
-					</div>
-					</div>
-			</div>
-			<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-					<h5>Question 3</h5>
-					<div class="row cadre">
-						<div class="col-10">
-							<div class="enonce cadre">
-								<p>enoncé</p>
-							</div>
-						<ul>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						</ul>
 					  </div>
-					<div class="col-2 d-flex align-items-center justify-content-center cadre">
-						<i class="fas fa-question"></i>
-					</div>
-				  </div>
-			</div>
-			<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-					<h5>Question 4</h5>
-					<div class="row cadre">
-						<div class="col-10">
-							<div class="enonce cadre">
-								<p>enoncé</p>
+						<div class="explication"><p>Cascading Style Sheet</p></div>
+				</div>
+								 <!--    question 2  -->
+				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
+						<h5>Question 2</h5>
+						<div class="row">
+							<div class="col-10">
+								<div class="enonce">
+									<p>How many columns in bootstrap's grid ?</p>
+								</div>
+							<ul>
+							<li><input type="radio"><span class="reponse">244</span></li>
+							<li><input type="radio"><span class="reponse">42</span></li>
+							<li><input type="radio"><span class="reponse">12</span></li>
+							</ul>
 							</div>
-						<ul>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						<li><input type="radio"><span class="reponse">reponse...</span></li>
-						</ul>
+						<div class="col-2 d-flex align-items-center justify-content-center">
+							<i class="fas fa-question fa-2x"></i>
+						</div>
+						</div>
+						<div class="explication"><p>12</p></div>
+				</div>
+					 				<!--    question 3  -->
+				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
+						<h5>Question 3</h5>
+						<div class="row">
+							<div class="col-10">
+								<div class="enonce">
+									<p>what name of variable is good ?</p>
+								</div>
+							<ul>
+							<li><input type="radio"><span class="reponse">myCode</span></li>
+							<li><input type="radio"><span class="reponse">2finger</span></li>
+							<li><input type="radio"><span class="reponse">var</span></li>
+							</ul>
+						  </div>
+						<div class="col-2 d-flex align-items-center justify-content-center">
+							<i class="fas fa-question fa-2x"></i>
+						</div>
 					  </div>
-					<div class="col-2 d-flex align-items-center justify-content-center cadre">
-						<i class="fas fa-question"></i>
-					</div>
-				  </div>
+						<div class="explication"><p>myCode</p></div>
+				</div>
+									<!--    question 4  -->
+				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
+						<h5>Question 4</h5>
+						<div class="row">
+							<div class="col-10">
+								<div class="enonce">
+									<p>What is alias of jQuery ?</p>
+								</div>
+							<ul>
+							<li><input type="radio"><span class="reponse">€</span></li>
+							<li><input type="radio"><span class="reponse">$</span></li>
+							<li><input type="radio"><span class="reponse">/$</span></li>
+							</ul>
+						  </div>
+						<div class="col-2 d-flex align-items-center justify-content-center">
+							<i class="fas fa-question fa-2x"></i>
+						</div>
+					  </div>
+						<div class="explication"><p>$</p></div>
+				</div>
 			</div>
-		</div>
     </section>
     <script>
+				$(".explication").hide();
+				let testing = $('input[name=answer1]:checked').val();
+				$("button").mouseenter(function(){
+					if(testing=='true'){
+							$('#imgq1').attr('src','bon.png');
+						} else {
+							$('#imgq1').attr('src','mauvais.png');
+					}
+					$(".explication").show();
+				}).mouseleave(function(){
+					$(".explication").hide();
+				});
 
+
+				 //<i class="fas fa-times"></i> croix
     </script>
   </body>
   </html>
