@@ -1,40 +1,46 @@
 /******************************/
 /*                            */
-/*     css by Mohican19       */
+/*   css by Bibi La Meduse    */
 /*                            */
 /******************************/
 
 /******************************/
-/*        général             */
-body {
-    margin: 0px;
-    padding: 0px;
-    background: #3a6186; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+body{
+	background: linear-gradient(to top right, #ff66ff 0%, #66ccff 100%);
 }
 
-.cadre {
-  border: 2px solid black;
-  border-radius: 10px;
+h1{
+	text-align: center;
+	margin: 20px;
 }
 
-/******************************/
-/*         header             */
-header {
-  top: 0;
-  position: sticky;
-  z-index: 1000000;
+#bouton-reponse{
+	display: flex;
+	width: 100%;
+	position: fixed;
 }
 
-/******************************/
-/*          questionnaire      */
+button{
+	margin-left: 80%;
+}
 
-ul {
-  list-style: none;
+.questions{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 20px;
+	background: linear-gradient(to right, #ffffcc 0%, #ffccff 100%);
 }
-ul span {
-  margin-left: 2em;
+
+.divImage{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-/******************************/
-/*         footer             */
+
+.reponse{
+	margin-left: 8px;
+}
+
