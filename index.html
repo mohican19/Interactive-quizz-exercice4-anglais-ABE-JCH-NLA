@@ -1,129 +1,108 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	      <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Interactive quizz</title>
-                            <!-- appel bootstrap et jquery .... -->
-        <link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet"> <!-- en local-->
-        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> --> <!-- en ligne -->
-        <script src="js/jquery-3.3.1.js"></script><!-- en local -->
-				<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> --><!-- jquery en ligne -->
-        <script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script> <!-- js bootstrap en local -->
-				<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> --><!-- js bootstrap en ligne -->
-	      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script> <!-- en ligne -->
-                            <!-- appel pour les icones de fontawesome -->
-				<link href="fontawesome-free-5.5.0-web/css/all.css" rel="stylesheet"><!-- en local -->
-				<script defer src="/fontawesome-free-5.5.0-web/js/all.js"></script><!-- en local -->
-        <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> --> <!-- en ligne -->
-                            <!-- appel fichier css   -->
-				<link rel="stylesheet" href="style.css"> <!-- mon css -->
-				<script src="js/script.js"></script>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>Interactive Quiz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+	<script src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
 
-	<body>
-    <header class="text-center bg-warning">
-			<h1>Interactive quizz</h1>
-			<button class="btn btn-danger mb-1">Answer</button>
-    </header>
-    <section class="container-fluid">
-			<div class="row justify-content-center">
-				     <!--    question 1  -->
-				<div id="question1" class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-						<h5>Question 1</h5>
-						<div class="row">
-							<div class="col-10">
-								<div class="enonce">
-									<p>What does CSS mean ? </p>
-								</div>
-							<div><input type="radio" id="q1rep1" name="answer1" value="false" checked><label class="reponse" for="reponse1">Call Sexy Sushi</label></div>
-							<div><input type="radio" id="q1rep2" name="answer1" value="true"><label class="reponse" for="reponse2">Cascading Style Sheet</label></div>
-							<div><input type="radio" id="q1rep2" name="answer1" value="false"><label class="reponse" for="reponse3">Create Style Sheet</label></div>
-						  </div>
-						<div class="col-2 d-flex align-items-center justify-content-center">
-							<img id="imgq1" class="" src="question.png">
-						</div>
-					  </div>
-						<div class="explication"><p>Cascading Style Sheet</p></div>
-				</div>
-								 <!--    question 2  -->
-				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-						<h5>Question 2</h5>
-						<div class="row">
-							<div class="col-10">
-								<div class="enonce">
-									<p>How many columns in bootstrap's grid ?</p>
-								</div>
-							<ul>
-							<li><input type="radio"><span class="reponse">244</span></li>
-							<li><input type="radio"><span class="reponse">42</span></li>
-							<li><input type="radio"><span class="reponse">12</span></li>
-							</ul>
-							</div>
-						<div class="col-2 d-flex align-items-center justify-content-center">
-							<i class="fas fa-question fa-2x"></i>
-						</div>
-						</div>
-						<div class="explication"><p>12</p></div>
-				</div>
-					 				<!--    question 3  -->
-				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-						<h5>Question 3</h5>
-						<div class="row">
-							<div class="col-10">
-								<div class="enonce">
-									<p>what name of variable is good ?</p>
-								</div>
-							<ul>
-							<li><input type="radio"><span class="reponse">myCode</span></li>
-							<li><input type="radio"><span class="reponse">2finger</span></li>
-							<li><input type="radio"><span class="reponse">var</span></li>
-							</ul>
-						  </div>
-						<div class="col-2 d-flex align-items-center justify-content-center">
-							<i class="fas fa-question fa-2x"></i>
-						</div>
-					  </div>
-						<div class="explication"><p>myCode</p></div>
-				</div>
-									<!--    question 4  -->
-				<div class="question col-lg-8 col-md-10 col-sm-10 cadre m-4 bg-success">
-						<h5>Question 4</h5>
-						<div class="row">
-							<div class="col-10">
-								<div class="enonce">
-									<p>What is alias of jQuery ?</p>
-								</div>
-							<ul>
-							<li><input type="radio"><span class="reponse">€</span></li>
-							<li><input type="radio"><span class="reponse">$</span></li>
-							<li><input type="radio"><span class="reponse">/$</span></li>
-							</ul>
-						  </div>
-						<div class="col-2 d-flex align-items-center justify-content-center">
-							<i class="fas fa-question fa-2x"></i>
-						</div>
-					  </div>
-						<div class="explication"><p>$</p></div>
-				</div>
+<body>
+	
+	<div class="container"> <!---------------------------------------------------DEBUT CONTAINER PRINCIPAL-->
+	<h1>INTERACTIVE QUIZ</h1>
+
+	<div id="bouton-reponse"><button class="btn btn-danger mb-1">Answer</button></div>
+		
+
+<!--QUESTION 1-->
+	<div class="container questions">
+		<div class="row">  <!----------------------------------------------------DEBUT ROW1-->
+			<div class="col-md-12"><h5>Question 1</h5><hr/></div>
+		</div> <!----------------------------------------------------------------FIN ROW1-->
+
+		<div class="row">  <!----------------------------------------------------DEBUT ROW2-->
+			<div class="col-md-10">
+				<h4>What does CSS mean ?</h4>
+				<div><input type="radio" id="q1rep1" name="answer1" checked><label class="reponse" for="reponse1">Call Sexy Sushi</label></div>
+				<div><input type="radio" id="q1rep2" name="answer1"><label class="reponse" for="reponse2">Cascading Style Sheet</label></div>
+				<div><input type="radio" id="q1rep3" name="answer1"><label class="reponse" for="reponse3">Create Style Sheet</label></div>
 			</div>
-    </section>
-    <script>
-				$(".explication").hide();
-				let testing = $('input[name=answer1]:checked').val();
-				$("button").mouseenter(function(){
-					if(testing=='true'){
-							$('#imgq1').attr('src','bon.png');
-						} else {
-							$('#imgq1').attr('src','mauvais.png');
-					}
-					$(".explication").show();
-				}).mouseleave(function(){
-					$(".explication").hide();
-				});
+
+			<div class="col-md-2 divImage"><img id="imgq1" class="image" src="img/question.png"></div>
+		</div> <!---------------------------------------------------------------FIN ROW2-->
+		<div class="col-md-12 explication"><hr><p id="p1">Cascading Style Sheet</p></div>
+	</div>
 
 
-				 //<i class="fas fa-times"></i> croix
-    </script>
-  </body>
-  </html>
+
+<!--QUESTION 2-->
+	<div class="container questions">
+		<div class="row">  <!---------------------------------------------------DEBUT ROW3-->
+			<div class="col-md-12"><h5>Question 2</h5><hr/></div>
+		</div> <!---------------------------------------------------------------FIN ROW3-->
+
+		<div class="row">  <!---------------------------------------------------DEBUT ROW4-->
+			<div class="col-md-10">
+				<h4>How many columns in bootstrap's grid system ?</h4>
+				<div><input type="radio" id="q2rep1" name="answer2" checked><label class="reponse" for="reponse1">224</label></div>
+				<div><input type="radio" id="q2rep2" name="answer2"><label class="reponse" for="reponse2">42</label></div>
+				<div><input type="radio" id="q2rep3" name="answer2"><label class="reponse" for="reponse3">12</label></div>				
+			</div>
+
+			<div class="col-md-2 divImage"><img id="imgq2" class="image" src="img/question.png"></div>
+		</div> <!--------------------------------------------------------------FIN ROW4-->
+		<div class="col-md-12 explication"><hr><p id="p2">12</p></div>
+	</div>
+
+
+
+<!--QUESTION 3-->
+	<div class="container questions">
+		<div class="row">  <!--------------------------------------------------DEBUT ROW5-->
+			<div class="col-md-12"><h5>Question 3</h5><hr/></div>
+		</div> <!--------------------------------------------------------------FIN ROW5-->
+
+		<div class="row">  <!--------------------------------------------------DEBUT ROW6-->
+			<div class="col-md-10">
+				<h4>What name of variable is good ?</h4>
+				<div><input type="radio" id="q3rep1" name="answer3" checked><label class="reponse" for="reponse1">myCode</label></div>
+				<div><input type="radio" id="q3rep2" name="answer3"><label class="reponse" for="reponse2">2fingers</label></div>
+				<div><input type="radio" id="q3rep3" name="answer3"><label class="reponse" for="reponse3">var</label></div>
+			</div>
+
+			<div class="col-md-2 divImage"><img id="imgq3" class="image" src="img/question.png"></div>
+		</div> <!-------------------------------------------------------------FIN ROW6-->
+		<div class="col-md-12 explication"><hr><p id="p3">myCode</p></div>
+	</div>
+
+
+
+<!--QUESTION 4-->
+	<div class="container questions">
+		<div class="row">  <!-------------------------------------------------DEBUT ROW7-->
+			<div class="col-md-12"><h5>Question 4</h5><hr/></div>
+		</div> <!-------------------------------------------------------------FIN ROW7-->
+
+		<div class="row">  <!-------------------------------------------------DEBUT ROW8-->
+			<div class="col-md-10">
+				<h4>What is the alias of jQuery ?</h4>
+				<div><input type="radio" id="q4rep1" name="answer4" checked><label class="reponse" for="reponse1">€</label></div>
+				<div><input type="radio" id="q4rep2" name="answer4"><label class="reponse" for="reponse2">$</label></div>
+				<div><input type="radio" id="q4rep3" name="answer4"><label class="reponse" for="reponse3">/$</label></div>
+			</div>
+
+			<div class="col-md-2 divImage"><img id="imgq4" class="image" src="img/question.png"></div>
+		</div> <!------------------------------------------------------------FIN ROW8-->
+		<div class="col-md-12 explication"><hr><p id="p4">$</p></div>		
+	</div>
+
+
+	</div> <!----------------------------------------------------------------FIN CONTAINER PRINCIPAL-->
+
+
+<script src="js/exercice.js" type="text/javascript"></script>
+</body>
+</html>
